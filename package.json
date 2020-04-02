@@ -1,6 +1,6 @@
 {
     "name": "psaville",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "Colour-codes text in a manner based on Peter Saville's artwork",
     "main": "psaville.js",
     "scripts": {},
