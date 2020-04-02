@@ -1,0 +1,10 @@
+{
+    "name": "psaville",
+    "version": "0.1.0",
+    "description": "Colour-codes text in a manner based on Peter Saville's artwork",
+    "main": "psaville.js",
+    "scripts": {},
+    "author": "int-72h, scoliono",
+    "license": "GPL-3.0",
+    "repository": "scoliono/psaville"
+}

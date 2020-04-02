@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>psaville.js demo</title>
+        <style>
+            canvas {
+                border: 1px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <input type="text" placeholder="Message to Encode">
+        <br>
+        <canvas width="1000px" height="500px"></canvas>
+        <script type="module">
+            import { encode } from '../psaville.js';
+            let txt = document.querySelector('input');
+            let canvas = document.querySelector('canvas');
+            let ctx = canvas.getContext('2d');
+            txt.addEventListener('input', () => {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                encode(txt.value, ctx);
+            });
+        </script>
+    </body>
+</html>
