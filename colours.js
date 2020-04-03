@@ -19,7 +19,9 @@ for (let i in alphabet) {
     if (char === ' ') continue;
     let quo = Math.floor(i / hex.length);
     let rem = i % hex.length;
-    key[char] = quo < 2 ? hex[rem] : [ hex[rem], hex[quo - 1] ];
+    key[char] = quo < 2 ? hex[rem] : [ hex[quo - 1], hex[rem] ];
 }
+
+key[' '] = '#a3a3a3';
 
 export { key };
