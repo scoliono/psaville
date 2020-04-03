@@ -8,9 +8,11 @@ I made this package in response to [int-72h](https://github.com/int-72h), who di
 
 ## Usage
 
-This module is intended to be run in the browser. It exports one method:
+This module is intended to be run in the browser, and it draws the result on an HTML canvas. It exports one method:
 
-### `encode(message, ctx, width = 30, height = 30, x = 0, y = 0)`
+### `encode(message, ctx, vertical = false, width = 30, height = 30, x = 0, y = 0)`
+
+Use it like so:
 
 ```html
 <canvas width="300" height="30"></canvas>
@@ -23,6 +25,12 @@ This module is intended to be run in the browser. It exports one method:
 </script>
 ```
 
+and you get:
+
 ![](./example/helloworld.png)
 
-Note that by design, the colour-coding does not differentiate between uppercase and lowercase, and it omits any non-alphanumeric character.
+What if you set `vertical` to `true`?
+
+![](./example/helloworld-vert.png)
+
+Note that by design, the colour-coding does not differentiate between uppercase and lowercase, and it omits any unrecognized characters. Also, if there are two digits in a row, they get stacked into one block. This introduces ambiguity; any letter will look identical to the number corresponding with its position in the alphabet. I don't make the rules I just enforce them
